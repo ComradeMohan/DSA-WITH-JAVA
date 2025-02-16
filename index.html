@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://i.ibb.co/4N2QPb0/android-launchericon-512-512.png" type="image/x-icon">
   <style>
-    :root[data-theme=light]{--bg-primary: #f0f2f5;--bg-secondary: #ffffff;--text-primary: #333333;--text-secondary: #666666;--accent-color: #3498db;--nav-bg: rgba(26, 35, 126, .85);--nav-text: #ffffff;--shadow-color: rgba(0, 0, 0, .1);--tag-bg: #e9ecef;--tag-text: #495057;--hover-bg: #3498db;--hover-text: #ffffff;--nav-active: rgba(255, 255, 255, .15);--nav-hover: rgba(255, 255, 255, .1);--nav-border: rgba(255, 255, 255, .1)}:root[data-theme=dark]{--bg-primary: #1a1a1a;--bg-secondary: #2d2d2d;--text-primary: #ffffff;--text-secondary: #b3b3b3;--accent-color: #3498db;--nav-bg: rgba(49, 27, 146, .85);--nav-text: #ffffff;--shadow-color: rgba(0, 0, 0, .3);--tag-bg: #404040;--tag-text: #d1d1d1;--hover-bg: #2980b9;--hover-text: #ffffff;--nav-active: rgba(255, 255, 255, .2);--nav-hover: rgba(255, 255, 255, .15);--nav-border: rgba(255, 255, 255, .1)}*{margin:0;padding:0;box-sizing:border-box;transition:background-color .3s,color .3s}body{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}.navbar{position:fixed;top:1rem;left:50%;transform:translate(-50%);width:95%;max-width:1400px;background:var(--nav-bg);color:var(--nav-text);padding:1rem 2rem;box-shadow:0 8px 32px #0003;z-index:1000;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-radius:20px;border:1px solid var(--nav-border)}.nav-content{display:flex;justify-content:space-between;align-items:center}.nav-content h1{font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}.nav-controls{display:flex;align-items:center;gap:1.5rem}.theme-toggle{background:#ffffff1a;border:1px solid var(--nav-border);color:var(--nav-text);font-size:1.2rem;cursor:pointer;padding:.5rem;border-radius:50%;transition:all .3s ease;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.theme-toggle:hover{background:var(--nav-hover);transform:translateY(-2px)}.menu-toggle{display:none;font-size:1.5rem;cursor:pointer;background:#ffffff1a;padding:.25rem .75rem;border-radius:8px;border:1px solid var(--nav-border)}.nav-links{display:flex;list-style:none;gap:1rem;background:#ffffff0d;padding:.5rem;border-radius:12px;border:1px solid var(--nav-border)}.nav-links a{color:var(--nav-text);text-decoration:none;font-weight:500;transition:all .3s ease;padding:.5rem 1rem;border-radius:8px;position:relative}.nav-links a:hover{background:var(--nav-hover);transform:translateY(-2px)}.nav-links a.active{background:var(--nav-active)}.nav-links a.active:after{content:"";position:absolute;bottom:0;left:50%;transform:translate(-50%);width:20px;height:2px;background:var(--accent-color);border-radius:2px}.container{max-width:800px;margin:120px auto 2rem;padding:0 2rem}.question-list{display:flex;flex-direction:column;gap:1.5rem}.question{background:var(--bg-secondary);padding:1.5rem;border-radius:12px;box-shadow:0 2px 5px var(--shadow-color);transform:translateY(50px);opacity:0;animation:slideIn .5s ease forwards;cursor:pointer;transition:all .3s ease;display:flex;justify-content:space-between;align-items:center}.question-content{flex:1}.question h3{color:var(--text-primary);margin-bottom:.5rem;font-size:1.2rem}.complexity{color:var(--text-secondary);font-size:.9rem;margin-bottom:.5rem}.tags{display:flex;gap:.5rem;flex-wrap:wrap}.tag{background:var(--tag-bg);color:var(--tag-text);padding:.25rem .75rem;border-radius:15px;font-size:.8rem;font-weight:500}.question i{color:var(--text-secondary);transition:transform .3s ease}.question:hover{transform:translateY(-5px);box-shadow:0 5px 15px var(--shadow-color);background:var(--hover-bg)}.question:hover h3,.question:hover .complexity,.question:hover i{color:var(--hover-text)}.question:hover .tag{background:#fff3;color:var(--hover-text)}@keyframes slideIn{to{transform:translateY(0);opacity:1}}.question.animate{animation:slideIn .5s ease forwards}.question:nth-child(1){animation-delay:.1s}.question:nth-child(2){animation-delay:.2s}.question:nth-child(3){animation-delay:.3s}.question:nth-child(4){animation-delay:.4s}.question:nth-child(5){animation-delay:.5s}.question:nth-child(6){animation-delay:.6s}.question:nth-child(7){animation-delay:.7s}@media screen and (max-width: 768px){.navbar{top:0;left:0;transform:none;width:100%;border-radius:0;padding:1rem}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:calc(100% + 1rem);left:1rem;right:1rem;flex-direction:column;background:var(--nav-bg);padding:1rem;gap:.5rem;border-radius:12px;box-shadow:0 8px 32px #0003;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--nav-border)}.nav-links.show{display:flex}.nav-links li{width:100%}.nav-links a{display:block;padding:.75rem 1rem;width:100%}.nav-links a.active:after{display:none}.container{margin-top:100px;padding:0 1rem}.question{padding:1.25rem}.nav-content h1{font-size:1.25rem}.tags{margin-top:.5rem}}
+    :root[data-theme=light]{--bg-primary: #f0f2f5;--bg-secondary: #ffffff;--text-primary: #333333;--text-secondary: #666666;--accent-color: #3498db;--nav-bg: rgba(26, 35, 126, .85);--nav-text: #ffffff;--shadow-color: rgba(0, 0, 0, .1);--tag-bg: #e9ecef;--tag-text: #495057;--hover-bg: #3498db;--hover-text: #ffffff;--nav-active: rgba(255, 255, 255, .15);--nav-hover: rgba(255, 255, 255, .1);--nav-border: rgba(255, 255, 255, .1)}
+
+    :root[data-theme=dark]{--bg-primary: #1a1a1a;--bg-secondary: #2d2d2d;--text-primary: #ffffff;--text-secondary: #b3b3b3;--accent-color: #3498db;--nav-bg: rgba(49, 27, 146, .85);--nav-text: #ffffff;--shadow-color: rgba(0, 0, 0, .3);--tag-bg: #404040;--tag-text: #d1d1d1;--hover-bg: #2980b9;--hover-text: #ffffff;--nav-active: rgba(255, 255, 255, .2);--nav-hover: rgba(255, 255, 255, .15);--nav-border: rgba(255, 255, 255, .1)}*{margin:0;padding:0;box-sizing:border-box;transition:background-color .3s,color .3s}
+
+    body{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}.navbar{position:fixed;top:1rem;left:50%;transform:translate(-50%);width:95%;max-width:1400px;background:var(--nav-bg);color:var(--nav-text);padding:1rem 2rem;box-shadow:0 8px 32px #0003;z-index:1000;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-radius:20px;border:1px solid var(--nav-border)}.nav-content{display:flex;justify-content:space-between;align-items:center}.nav-content h1{font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}.nav-controls{display:flex;align-items:center;gap:1.5rem}.theme-toggle{background:#ffffff1a;border:1px solid var(--nav-border);color:var(--nav-text);font-size:1.2rem;cursor:pointer;padding:.5rem;border-radius:50%;transition:all .3s ease;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.theme-toggle:hover{background:var(--nav-hover);transform:translateY(-2px)}.menu-toggle{display:none;font-size:1.5rem;cursor:pointer;background:#ffffff1a;padding:.25rem .75rem;border-radius:8px;border:1px solid var(--nav-border)}.nav-links{display:flex;list-style:none;gap:1rem;background:#ffffff0d;padding:.5rem;border-radius:12px;border:1px solid var(--nav-border)}.nav-links a{color:var(--nav-text);text-decoration:none;font-weight:500;transition:all .3s ease;padding:.5rem 1rem;border-radius:8px;position:relative}.nav-links a:hover{background:var(--nav-hover);transform:translateY(-2px)}.nav-links a.active{background:var(--nav-active)}.nav-links a.active:after{content:"";position:absolute;bottom:0;left:50%;transform:translate(-50%);width:20px;height:2px;background:var(--accent-color);border-radius:2px}.container{max-width:800px;margin:120px auto 2rem;padding:0 2rem}.question-list{display:flex;flex-direction:column;gap:1.5rem}.question{background:var(--bg-secondary);padding:1.5rem;border-radius:12px;box-shadow:0 2px 5px var(--shadow-color);transform:translateY(50px);opacity:0;animation:slideIn .5s ease forwards;cursor:pointer;transition:all .3s ease;display:flex;justify-content:space-between;align-items:center}.question-content{flex:1}.question h3{color:var(--text-primary);margin-bottom:.5rem;font-size:1.2rem}.complexity{color:var(--text-secondary);font-size:.9rem;margin-bottom:.5rem}.tags{display:flex;gap:.5rem;flex-wrap:wrap}.tag{background:var(--tag-bg);color:var(--tag-text);padding:.25rem .75rem;border-radius:15px;font-size:.8rem;font-weight:500}.question i{color:var(--text-secondary);transition:transform .3s ease}.question:hover{transform:translateY(-5px);box-shadow:0 5px 15px var(--shadow-color);background:var(--hover-bg)}.question:hover h3,.question:hover .complexity,.question:hover i{color:var(--hover-text)}.question:hover .tag{background:#fff3;color:var(--hover-text)}@keyframes slideIn{to{transform:translateY(0);opacity:1}}.question.animate{animation:slideIn .5s ease forwards}.question:nth-child(1){animation-delay:.1s}.question:nth-child(2){animation-delay:.2s}.question:nth-child(3){animation-delay:.3s}.question:nth-child(4){animation-delay:.4s}.question:nth-child(5){animation-delay:.5s}.question:nth-child(6){animation-delay:.6s}.question:nth-child(7){animation-delay:.7s}@media screen and (max-width: 768px){.navbar{top:0;left:0;transform:none;width:100%;border-radius:0;padding:1rem}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:calc(100% + 1rem);left:1rem;right:1rem;flex-direction:column;background:var(--nav-bg);padding:1rem;gap:.5rem;border-radius:12px;box-shadow:0 8px 32px #0003;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--nav-border)}.nav-links.show{display:flex}.nav-links li{width:100%}.nav-links a{display:block;padding:.75rem 1rem;width:100%}.nav-links a.active:after{display:none}.container{margin-top:100px;padding:0 1rem}.question{padding:1.25rem}.nav-content h1{font-size:1.25rem}.tags{margin-top:.5rem}}
 
   </style>
 </head>
@@ -23,7 +27,10 @@
                 <div class="menu-toggle">☰</div>
                 <ul class="nav-links">
                     <li><a href="#all" class="active">All Topics</a></li>
+                    <li><a href="#array">Array</a></li>
                     <li><a href="#sorting">Sorting</a></li>
+                    <li><a href="#LL">Linked List</a></li>
+                    <li><a href="#queue">Queue</a></li>
                     <li><a href="#searching">Searching</a></li>
                     <li><a href="#trees">Trees</a></li>
                     <li><a href="#graphs">Graphs</a></li>
@@ -34,7 +41,7 @@
 
     <div class="container">
         <div class="question-list">
-            <div class="question" data-category="sorting">
+            <div class="question" data-category="sorting" onclick="window.location.href='https://oii.la/Merge_Sort'">
                 <div class="question-content">
                     <h3>Q1. Merge Sort</h3>
                     <p class="complexity">Time Complexity: O(n log n)</p>
@@ -45,9 +52,9 @@
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="question" data-category="sorting">
+            <div class="question" data-category="sorting" onclick="window.location.href='https://oii.la/Quick_Sort'">
                 <div class="question-content">
-                    <h3>Q2. Selection Sort</h3>
+                    <h3>Q2. Quick Sort</h3>
                     <p class="complexity">Time Complexity: O(n²)</p>
                     <div class="tags">
                         <span class="tag">In-place</span>
@@ -58,7 +65,7 @@
             </div>
             <div class="question" data-category="sorting">
                 <div class="question-content">
-                    <h3>Q3. Quick Sort</h3>
+                    <h3>Q3. Selection Sort</h3>
                     <p class="complexity">Time Complexity: O(n log n)</p>
                     <div class="tags">
                         <span class="tag">Divide & Conquer</span>
@@ -78,9 +85,9 @@
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="question" data-category="searching">
+            <div class="question" data-category="array">
                 <div class="question-content">
-                    <h3>Q5. Binary Search</h3>
+                    <h3>Q5. ArrayList</h3>
                     <p class="complexity">Time Complexity: O(log n)</p>
                     <div class="tags">
                         <span class="tag">Divide & Conquer</span>
@@ -89,9 +96,9 @@
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="question" data-category="trees">
+            <div class="question" data-category="queue">
                 <div class="question-content">
-                    <h3>Q6. Binary Tree Traversal</h3>
+                    <h3>Q6. Circular Queue</h3>
                     <p class="complexity">Time Complexity: O(n)</p>
                     <div class="tags">
                         <span class="tag">Trees</span>
@@ -100,9 +107,108 @@
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="question" data-category="graphs">
+            <div class="question" data-category="queue">
                 <div class="question-content">
-                    <h3>Q7. Graph DFS & BFS</h3>
+                    <h3>Q7. Queue using Queue Package</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div> 
+            <div class="question" data-category="queue">
+                <div class="question-content">
+                    <h3>Q8. Queue using 2 Stack Pop</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="queue">
+                <div class="question-content">
+                    <h3>Q9. Queue using 2 Stack Push</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="queue">
+                <div class="question-content">
+                    <h3>Q10. Queue using Queue Class</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="queue">
+                <div class="question-content">
+                    <h3>Q11. Queue using Linked List</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="queue">
+                <div class="question-content">
+                    <h3>Q12. Queues</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="LL">
+                <div class="question-content">
+                    <h3>Q13. Linked List </h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="LL">
+                <div class="question-content">
+                    <h3>Q14. Linked List by Package</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="LL">
+                <div class="question-content">
+                    <h3>Q15. Linked List Check Palindrome</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="LL">
+                <div class="question-content">
+                    <h3>Q16. Remove Nth Element From End Linked List</h3>
                     <p class="complexity">Time Complexity: O(V + E)</p>
                     <div class="tags">
                         <span class="tag">Graphs</span>
@@ -115,6 +221,8 @@
     </div>
 
     <script>
+
+
         // Theme toggle
         const themeToggle = document.querySelector('.theme-toggle');
         const html = document.documentElement;

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA with Java</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-B66t6EEl.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1><i class="fas fa-code"></i> DSA with Java</h1>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="#all" class="active">All Topics</a></li>
+                    <li><a href="#sorting">Sorting</a></li>
+                    <li><a href="#searching">Searching</a></li>
+                    <li><a href="#trees">Trees</a></li>
+                    <li><a href="#graphs">Graphs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="question-list">
+            <div class="question" data-category="sorting">
+                <div class="question-content">
+                    <h3>Q1. Merge Sort</h3>
+                    <p class="complexity">Time Complexity: O(n log n)</p>
+                    <div class="tags">
+                        <span class="tag">Divide & Conquer</span>
+                        <span class="tag">Sorting</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="sorting">
+                <div class="question-content">
+                    <h3>Q2. Selection Sort</h3>
+                    <p class="complexity">Time Complexity: O(n²)</p>
+                    <div class="tags">
+                        <span class="tag">In-place</span>
+                        <span class="tag">Sorting</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="sorting">
+                <div class="question-content">
+                    <h3>Q3. Quick Sort</h3>
+                    <p class="complexity">Time Complexity: O(n log n)</p>
+                    <div class="tags">
+                        <span class="tag">Divide & Conquer</span>
+                        <span class="tag">Sorting</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="sorting">
+                <div class="question-content">
+                    <h3>Q4. Bubble Sort</h3>
+                    <p class="complexity">Time Complexity: O(n²)</p>
+                    <div class="tags">
+                        <span class="tag">In-place</span>
+                        <span class="tag">Sorting</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="searching">
+                <div class="question-content">
+                    <h3>Q5. Binary Search</h3>
+                    <p class="complexity">Time Complexity: O(log n)</p>
+                    <div class="tags">
+                        <span class="tag">Divide & Conquer</span>
+                        <span class="tag">Searching</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="trees">
+                <div class="question-content">
+                    <h3>Q6. Binary Tree Traversal</h3>
+                    <p class="complexity">Time Complexity: O(n)</p>
+                    <div class="tags">
+                        <span class="tag">Trees</span>
+                        <span class="tag">DFS</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="question" data-category="graphs">
+                <div class="question-content">
+                    <h3>Q7. Graph DFS & BFS</h3>
+                    <p class="complexity">Time Complexity: O(V + E)</p>
+                    <div class="tags">
+                        <span class="tag">Graphs</span>
+                        <span class="tag">Traversal</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        const themeIcon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            themeIcon.className = newTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Filter questions
+        const links = document.querySelectorAll('.nav-links a');
+        const questions = document.querySelectorAll('.question');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Update active state
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                const category = link.getAttribute('href').substring(1);
+                
+                // Hide mobile menu after selection
+                navLinks.classList.remove('show');
+
+                // Filter questions
+                questions.forEach(question => {
+                    question.style.animation = 'none';
+                    question.offsetHeight; // Trigger reflow
+                    question.style.animation = null;
+                    
+                    if (category === 'all' || question.dataset.category === category) {
+                        question.style.display = 'flex';
+                        question.classList.add('animate');
+                    } else {
+                        question.style.display = 'none';
+                        question.classList.remove('animate');
+                    }
+                });
+            });
+        });
+
+        // Add hover effect for questions
+        questions.forEach(question => {
+            question.addEventListener('mouseenter', () => {
+                const icon = question.querySelector('.fa-chevron-right');
+                icon.style.transform = 'translateX(5px)';
+            });
+
+            question.addEventListener('mouseleave', () => {
+                const icon = question.querySelector('.fa-chevron-right');
+                icon.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
